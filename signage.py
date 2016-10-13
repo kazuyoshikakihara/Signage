@@ -1,5 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+"""
+表記ゆれチェッカ
+「引っ越し」と「引越し」など、日本語の表記にありがちなゆれを検出する校正支援ツール
+"""
+__author__ = "kazuyoshikakihara"
+__status__ = "development"
+__version__ = "0.0.1"
+__date__    = "13 Octorber 2016"
 
 import MeCab
 import unittest
@@ -64,7 +72,7 @@ class Signage:
         """
         入力された文章を元に、表記ゆれの可能性のある読み、品詞を返すfunction
         Args: 文章。複数の文章でも構わない。
-        Returns: (読み, 品詞)をキーとし、原形のセット(原形は２種類以上)を値とした辞書
+        Returns: (読み, 品詞)をキーとし、原形のセット(原形は2種類以上)を値とした辞書
         """
         signage_dic = self._extract_signage(source)
 
